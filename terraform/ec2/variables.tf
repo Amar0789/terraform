@@ -5,3 +5,7 @@ variable "ami"{
 variable "instance"{
     default = "pruod"
 }
+
+variable "instances"{
+    default = ["mysql","backend","frontend"]
+}
