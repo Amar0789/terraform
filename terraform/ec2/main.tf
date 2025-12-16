@@ -1,14 +1,14 @@
-resource "aws_instance" "one"{
+resource "aws_instance" "aws"{
     ami = "ami-09c813fb71547fc4f"
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.allow.id]
 
     tags = {
-        Name = "server"
+        Name = "first"
     }
 }
 
-resource "aws_security_group" "allow"{
+resource "aws_security_group" "allow" {
 
     egress {
         from_port = 0
@@ -24,7 +24,8 @@ resource "aws_security_group" "allow"{
         cidr_blocks = ["0.0.0.0/0"]
         ipv6_cidr_blocks = ["::/0"]
     }
-    tags = {
+
+    tags= {
         Name = "allow_all"
     }
 
