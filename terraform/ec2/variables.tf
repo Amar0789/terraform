@@ -3,5 +3,5 @@ variable "ami"{
 }
 
 variable "instance"{
-    default = "prod"
+    default = "pruod"
 }
