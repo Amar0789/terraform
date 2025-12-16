@@ -1,3 +1,3 @@
-output "instance_info"{
-    value = aws_instance.aws[*].public_ip
+output "ip"{
+    value = aws_instance.tf[*]
 }

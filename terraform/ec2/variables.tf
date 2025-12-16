@@ -2,10 +2,6 @@ variable "ami"{
     default = "ami-09c813fb71547fc4f"
 }
 
-variable "instance"{
-    default = "pruod"
-}
-
 variable "instances"{
     default = ["mysql","backend","frontend"]
 }
