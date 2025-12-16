@@ -1,6 +1,6 @@
 resource "aws_instance" "tf"{
     ami = var.ami
-    count = 3
+    count = length(var.instances)
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.aws.id]
 
