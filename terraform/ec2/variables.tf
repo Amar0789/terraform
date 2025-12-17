@@ -7,5 +7,5 @@ variable "instances"{
 }
 
 variable "domain_name" {
-    default = app789.site
+    default = "app789.site"
 }
