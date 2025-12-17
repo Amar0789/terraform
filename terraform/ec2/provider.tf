@@ -5,8 +5,13 @@ terraform{
             version = "5.66.0"
         }
     }
+
+    backend "s3" { 
+        bucket = "myapp789bucket"
+        key = "one"
+        region = "us-east-1"
+        dunamo_db_table = "locking(testing)"
+    }
+
 }
 
-provider "aws" {
-    region = "us-east-1"
-}
