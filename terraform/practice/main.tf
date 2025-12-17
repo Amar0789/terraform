@@ -1,6 +1,5 @@
-module "ec2" {
+module "ec2"{
     source = "../ec2/"
-    ami = var.ami_id
+    ami_id = var.ami
     instance_type = var.instance_type
-
 }
