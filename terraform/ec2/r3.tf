@@ -1,4 +1,4 @@
-resource "aws_route53_record"{
+resource "aws_route53_record" "r53"{
     zone_id = var.zone_id
     type = "A"
     ttl = 1
