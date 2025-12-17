@@ -10,17 +10,17 @@ resource "aws_instance" "tf"{
 
     provisioner "remote-exec"{
         inline = [
-            sudo dnf install tree -y,
-            sudo dnf install nginx -y,
-            sudo systemctl start nginx -y,
+            "sudo dnf install tree -y",
+            "sudo dnf install nginx -y",
+            "sudo systemctl start nginx -y",
         ]
     }
 
     provisioner "remote-exec"{
         when = destroy
         inline = [
-            sudo dnf remove tree -y,
-            sudo dnf remove nginx -y,
+            "sudo dnf remove tree -y",
+            "sudo dnf remove nginx -y",
         ]
     }
 
