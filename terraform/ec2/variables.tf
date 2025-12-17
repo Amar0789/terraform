@@ -5,3 +5,7 @@ variable "ami"{
 variable "instances"{
     default = ["mysql","backend","frontend"]
 }
+
+variable "domain_name" {
+    default = app789.site
+}
