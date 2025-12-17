@@ -8,6 +8,12 @@ resource "aws_instance" "tf"{
     
     }
 
+    connection {
+        user = "ec2-user"
+        type = "ssh"
+        host = self.public_ip
+    }
+
     provisioner "remote-exec"{
         inline = [
             "sudo dnf install tree -y",
