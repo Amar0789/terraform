@@ -1,11 +1,10 @@
 resource "aws_instance" "tf"{
     ami = var.ami
-    count = length(var.instances)
-    instance_type = local.instance_type
+    instance_type = var.insatnce_type
     vpc_security_group_ids = [aws_security_group.aws.id]
 
     tags = {
-        Name = var.instances[count.index]
+        Name = Modul_demo
     }
 }
 
