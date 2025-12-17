@@ -1,9 +1,8 @@
-resource "aws_route53_record" "r53"{
-    count = length(var.instances)
-    zone_id = "Z01736442JTWOVOV6NKL6"
+resource "aws_route53_record"{
+    zone_id = var.zone_id
     type = "A"
-    ttl =1
-    name = "${var.instances[count.index]}.${var.domain_name}"
-    records = [aws_instance.tf[count.index].private_ip]
+    ttl = 1
     allow_overwrite = true
+    name = "${var.instances[count.index].${var.domain_name}"
+    records = [aws_instance.tf[count.index].private_ip]
 }

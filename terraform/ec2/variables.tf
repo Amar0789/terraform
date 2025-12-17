@@ -9,3 +9,6 @@ variable "instances"{
 variable "domain_name" {
     default = "app789.site"
 }
+variable "zone_id"{
+    defaut = "Z01736442JTWOVOV6NKL6"
+}
