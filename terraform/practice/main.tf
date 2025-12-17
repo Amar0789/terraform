@@ -12,7 +12,7 @@ resource "aws_instance" "tf"{
         user = "ec2-user"
         type = "ssh"
         host = self.public_ip
-        private_key = file("${C:/Amar/devops/daws-81s}/keys")
+        private_key = file("/home/ec2-user/keys")
     }
 
     provisioner "remote-exec"{
