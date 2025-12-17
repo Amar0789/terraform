@@ -10,7 +10,7 @@ terraform{
         bucket = "myapp789bucket"
         key = "one"
         region = "us-east-1"
-        dynamodb_table = "locking-testing"
+        dynamodb_table = "testing"
     }
 
 }
