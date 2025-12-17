@@ -12,7 +12,7 @@ resource "aws_instance" "tf"{
         inline = [
             sudo dnf install tree -y,
             sudo dnf install nginx -y,
-            sudo systemctl start nginx -y
+            sudo systemctl start nginx -y,
         ]
     }
 
@@ -20,7 +20,7 @@ resource "aws_instance" "tf"{
         when = destroy
         inline = [
             sudo dnf remove tree -y,
-            sudo dnf remove nginx -y
+            sudo dnf remove nginx -y,
         ]
     }
 
