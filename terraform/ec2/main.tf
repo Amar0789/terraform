@@ -1,7 +1,7 @@
 resource "aws_instance" "tf"{
     ami = var.ami
     count = length(var.instances)
-    instance_type = "t3.micro"
+    instance_type = local.instance_type
     vpc_security_group_ids = [aws_security_group.aws.id]
 
     tags = {
