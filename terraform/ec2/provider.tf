@@ -10,7 +10,7 @@ terraform{
         bucket = "myapp789bucket"
         key = "one"
         region = "us-east-1"
-        dunamo_db_table = "locking(testing)"
+        dynamo_db_table = "locking(testing)"
     }
 
 }
