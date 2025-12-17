@@ -11,6 +11,7 @@ terraform{
         key = "one"
         region = "us-east-1"
         dynamodb_table = "testing"
+        encrypt = true
     }
 
 }
