@@ -12,13 +12,14 @@ resource "aws_instance" "tf"{
         user = "ec2-user"
         type = "ssh"
         host = self.public_ip
+        private_key = file("C:\Amar\devops\daws-81s\keys")
     }
 
     provisioner "remote-exec"{
         inline = [
             "sudo dnf install tree -y",
             "sudo dnf install nginx -y",
-            "sudo systemctl start nginx -y",
+            "sudo systemctl start nginx",
         ]
     }
 
