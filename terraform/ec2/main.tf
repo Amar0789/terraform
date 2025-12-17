@@ -4,7 +4,7 @@ resource "aws_instance" "tf"{
     vpc_security_group_ids = [aws_security_group.aws.id]
 
     tags = {
-        Name = Modul_demo
+        Name = "Modul_demo"
     }
 }
 
