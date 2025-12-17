@@ -10,5 +10,5 @@ variable "domain_name" {
     default = "app789.site"
 }
 variable "zone_id"{
-    defaut = "Z01736442JTWOVOV6NKL6"
+    default = "Z01736442JTWOVOV6NKL6"
 }
