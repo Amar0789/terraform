@@ -1,5 +1,5 @@
 output "private_ip"{
-    value = module.ec2.private.ip
+    value = module.ec2.private_ip
 }
 
 output "public_ip"{
@@ -7,5 +7,5 @@ output "public_ip"{
 }
 
 output "instance_id"{
-    value = module.ec2.instance.id
+    value = module.ec2.instance_id
 }
