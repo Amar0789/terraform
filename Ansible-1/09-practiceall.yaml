@@ -6,5 +6,7 @@
   become: yes
   tasks:
   - name: To ping server
+    vars:
+     duration: 130
     ansible.builtin.debug:
      msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. "
