@@ -1,8 +1,8 @@
-- name: To practice Ansible
-  hosts: devopss
+- name: To install nginx
+  hosts: web
   become: yes
-  gather_facts: yes
-  vars:
-   hello: "My name is Amar Sai"
-  roles:
-  - mysql
+  tasks:
+  - name: To install nginx
+    ansible.builtin.package:
+     name: nginx
+     state: present
