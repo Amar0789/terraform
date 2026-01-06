@@ -1,7 +1,9 @@
 - name: To install nginx
   hosts: web
+  vars:
+   name: nginx
   become: yes
   tasks:
   - name: To ping server
     ansible.builtin.debug:
-     msg: "This is just a display message"
+     msg: "Hi, welcome to {{name}} training session"
