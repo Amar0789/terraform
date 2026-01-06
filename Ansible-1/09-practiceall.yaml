@@ -16,3 +16,4 @@
      duration: 130
     ansible.builtin.debug:
      msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. The name of the trainer is {{persons}} and venue in {{location}}"
+    when: "location | int > 0"
