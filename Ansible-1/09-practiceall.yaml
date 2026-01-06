@@ -2,8 +2,9 @@
   hosts: web
   vars:
    name: nginx
+   duration: 120
   become: yes
   tasks:
   - name: To ping server
     ansible.builtin.debug:
-     msg: "Hi, welcome to {{name}} training session"
+     msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. "
