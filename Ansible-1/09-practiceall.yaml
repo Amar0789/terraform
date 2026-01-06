@@ -1,5 +1,7 @@
 - name: To install nginx
   hosts: web
+  vars_files:
+  - vars.yaml
   vars:
    name: nginx
    duration: 120
@@ -9,4 +11,4 @@
     vars:
      duration: 130
     ansible.builtin.debug:
-     msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. "
+     msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. The name of the trainer is {{persons}}"
