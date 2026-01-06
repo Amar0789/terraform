@@ -2,5 +2,5 @@
   hosts: web
   become: yes
   tasks:
-  - name: To install nginx
+  - name: To ping server
     ansible.builtin.ping:
