@@ -5,10 +5,14 @@
   vars:
    name: nginx
    duration: 120
+  vars_prompt:
+   name: loaction
+   prompt: What is your preferred loaction
+   private: yes
   become: yes
   tasks:
   - name: To ping server
     vars:
      duration: 130
     ansible.builtin.debug:
-     msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. The name of the trainer is {{persons}}"
+     msg: "Hi, welcome to {{name}} training session. And the duration of this session will be {{duration}} hrs. The name of the trainer is {{persons}} and venue in {{location}}"
