@@ -6,7 +6,7 @@
    name: nginx
    duration: 120
   vars_prompt:
-   name: loaction
+   name: location
    prompt: What is your preferred loaction
    private: yes
   become: yes
