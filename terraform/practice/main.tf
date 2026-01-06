@@ -1,6 +1,6 @@
 resource "aws_instance" "practise"{
     ami = var.ami_id
-    instance_type = var.environment == "prod"? "t3.micor" : "t3.small"
+    instance_type = var.environment == "prod"? "t3.micro" : "t3.small"
     vpc_security_group_ids = [aws_security_group.allow.id]
 
     tags = {
