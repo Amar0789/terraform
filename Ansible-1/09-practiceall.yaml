@@ -3,4 +3,5 @@
   become: yes
   tasks:
   - name: To ping server
-    ansible.builtin.ping:
+    ansible.builtin.debug:
+     msg: "This is just a display message"
