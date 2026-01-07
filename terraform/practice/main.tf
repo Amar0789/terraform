@@ -13,7 +13,7 @@ resource "aws_instance" "practise"{
     connection {
         user = "ec2-user"
         type = "ssh"
-        private_key = "/home/ec2-user/mykey.pem"
+        private_key = file("/home/ec2-user/mykey.pem")
         host = self.public_ip
     }
 
