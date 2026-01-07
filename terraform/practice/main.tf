@@ -13,7 +13,7 @@ resource "aws_instance" "practise"{
     connection {
         user = "ec2-user"
         type = "ssh"
-        private_key = file("/home/ec2-user/mykey.pem")
+        password = "DEvOps321"
         host = self.public_ip
     }
 
@@ -21,7 +21,7 @@ resource "aws_instance" "practise"{
        inline = [
 
         "sudo dnf install nginx -y",
-        "systemctl start nginx",
+        "sudo systemctl start nginx",
 
         ]
     }
