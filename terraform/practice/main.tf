@@ -13,7 +13,7 @@ resource "aws_instance" "practise"{
     connection {
         user = "ec2-user"
         type = "ssh"
-        password = "DEvOps321"
+        password = "DevOps321"
         host = self.public_ip
     }
 
