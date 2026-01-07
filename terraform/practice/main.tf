@@ -6,6 +6,25 @@ resource "aws_instance" "practise"{
     tags = {
         Name = "new"
     }
+    provisioner "local-exec"{
+        command = "echo 'hi' > ile.txt"
+    }
+
+    connection {
+        user = "ec2-user"
+        type = "ssh"
+        private_key = "/home/ec2-user/mykey.pem"
+        host = self.public_ip
+    }
+
+    provisioner "remote-exec"{
+       inline = [
+
+        "sudo dnf install nginx -y",
+        "systemctl start nginx",
+
+        ]
+    }
 }
 
 resource "aws_security_group" "allow"{
