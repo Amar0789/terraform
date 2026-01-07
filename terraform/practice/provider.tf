@@ -5,8 +5,14 @@ terraform {
             version = "5.66.0"
         }
     }
+    backend "s3"{
+        bucket = "myapp789bucket"
+        key = "two"
+        region = "us-east-1"
+        dynamodb_table = "testing-locking"
+    }
 }
 
 provider "aws"{
-    region = "us-east-1"
+    reion = "us-east-1"
 }
