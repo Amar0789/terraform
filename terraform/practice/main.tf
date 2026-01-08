@@ -13,3 +13,18 @@ resource "aws_subnet" "public" {
     cidr_block = "10.0.1.0/24"
     map_public_ip_on_launch = true
 }
+
+resource "aws_route_table" "main"{
+    vpc_id = aws_vpc.main.id
+}
+
+resource "aws_route" "main"{
+    route_table_id = aws_route_table.main.id
+    destination_cidr = "0.0.0.0/0"
+    gate_way_id = aws_internet_gateway.main.id
+}
+
+resource "aws_route_table_association"{
+    subnet_id = aws_subnet.main.id
+    route_table_id = aws_route_table.main.id
+}
