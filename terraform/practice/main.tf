@@ -13,7 +13,7 @@ resource "aws_subnet" "public"{
 
 }
 resource "aws_lb" "main"{
-    name = "app_alb"
+    name = "app-alb"
     load_balancer_type = "application"
     internal = false
     subnets = [aws_subnet.public.id]
